@@ -133,6 +133,11 @@ document.addEventListener('keydown', (event) => {
         event.preventDefault();
         handleMorseInput(event.key);
     }
+    // Add Ctrl + - shortcut for clearing input
+    if (event.ctrlKey && event.key === '-') {
+        event.preventDefault();
+        clearInput();
+    }
 });
 
 // Clear button event listener
