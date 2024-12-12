@@ -43,7 +43,7 @@ body {
 }
 
 .nav-links a.active {
-    background-color: #007bff;
+    background-color: #346090;
 }
 
 .github-link {
@@ -124,6 +124,12 @@ textarea {
     margin-bottom: 10px;
 }
 
+textarea:focus {
+    outline: none;
+    border: 2px solid #346090;  
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
 .buttons {
     display: flex;
     gap: 10px;
@@ -133,7 +139,7 @@ textarea {
 
 button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #346090;
     color: white;
     border: none;
     border-radius: 5px;
@@ -143,7 +149,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #000000;
 }
 
 /* Morse Guide */
