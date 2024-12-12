@@ -99,11 +99,13 @@ h3 {
 .morse-input {
     font-family: monospace;
     font-size: 24px;
-    min-height: 40px;
+    height: 40px;
     margin-bottom: 10px;
     background-color: #f8f9fa;
     padding: 10px;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .instruction {
@@ -130,11 +132,25 @@ textarea:focus {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
 }
 
+/* Buttons container */
 .buttons {
     display: flex;
-    gap: 10px;
+    align-items: center;
     justify-content: center;
-    margin: 15px 0;
+    gap: 10px;
+    margin: 10px 0;
+    flex-wrap: nowrap;
+}
+
+/* Mobile buttons container */
+.mobile-buttons {
+    display: none;  /* Hidden by default */
+    gap: 10px;
+    width: 100%;
+}
+
+.mobile-buttons .morse-btn {
+    flex: 1;
 }
 
 button {
@@ -150,6 +166,44 @@ button {
 
 button:hover {
     background-color: #000000;
+}
+
+/* Mobile Morse Input Buttons */
+.morse-btn {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #346090;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 60px;
+}
+
+.morse-btn:active {
+    background-color: #254468;
+}
+
+/* Show morse buttons on mobile devices */
+@media (max-width: 768px) {
+    .mobile-buttons {
+        display: flex;
+    }
+    
+    .buttons {
+        gap: 5px;
+    }
+    
+    .morse-btn {
+        padding: 8px 15px;
+        font-size: 18px;
+        min-width: 50px;
+    }
+    
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
 }
 
 /* Morse Guide */

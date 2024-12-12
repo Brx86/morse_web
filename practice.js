@@ -133,14 +133,15 @@ document.addEventListener('keydown', (event) => {
         event.preventDefault();
         handleMorseInput(event.key);
     }
-    // Add Ctrl + - shortcut for clearing input
     if (event.ctrlKey && event.key === '-') {
         event.preventDefault();
         clearInput();
     }
 });
 
-// Clear button event listener
+// Mobile button event listeners
+document.getElementById('dot-btn').addEventListener('click', () => handleMorseInput('.'));
+document.getElementById('dash-btn').addEventListener('click', () => handleMorseInput('-'));
 document.getElementById('clear-btn').addEventListener('click', clearInput);
 
 // Initialize the guide when page loads
