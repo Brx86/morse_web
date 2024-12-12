@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Translator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-links">
+            <a href="index.html" class="active">Translator</a>
+            <a href="practice.html">Practice</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Morse Code Translator</h1>
+        <div class="translator">
+            <div class="input-section">
+                <textarea id="input-text" placeholder="Enter English text or Morse code..."></textarea>
+                <div class="buttons">
+                    <button id="to-morse">Convert to Morse</button>
+                    <button id="to-english">Convert to English</button>
+                    <button id="play-morse">Play Morse</button>
+                </div>
+            </div>
+            <div class="output-section">
+                <textarea id="output-text" readonly placeholder="Translation will appear here..."></textarea>
+            </div>
+        </div>
+        <div class="morse-guide">
+            <h3>Morse Code Guide</h3>
+            <div id="morse-table"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
